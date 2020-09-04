@@ -5,9 +5,125 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e4e4e4;
+  /* overflow-x: hidden; */
+}
+.btn, .btn:focus{
+  user-select: none !important;
+  box-shadow: none !important;
+}
+.navbar-link{
+  text-decoration: none !important;
+}
+.navbar{
+  justify-items: right;
+  border-radius: 15px;
+}
+.dropdown-item:hover{
+  background-color: #3c4249;
+}
+.brand-icon{
+  transition: transform 0.2s ease-in-out,transform 0.2s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.brand-icon:hover{
+  transform: scale(1.1);
+  cursor: pointer
+}
+.carousel-item img{
+  height: 400px;
+}
+.carousel-inner{
+  border-radius: 15px;
+}
+.carousel-indicators li{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.tile{
+  border-radius: 15px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  transition: filter 0.2s ease-in-out;
+}
+.tile:hover{
+  filter: brightness(120%);
+}
+.tile:hover .tile-icon{
+  transform: scale(1.5) translate(-38%,-40%);
+}
+.tile:hover .tile-description{
+  transform: translate(-50%,-10px) rotate(-5deg);
+}
+.tileButtons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2em;
+}
+.tile-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+.tile-description{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%,-20px);
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+footer *{
+  margin: 0;
+  padding: 0;
+}
+.Footer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2em;
+}
+#articleCont{
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+@media(max-width:575px){
+  .navbar{
+    border-radius: 0px;
+
+  }
+  .brand-icon{
+    transform: scale(0.7);
+  }
+  .brand-icon:hover{
+    transform: scale(0.9);
+  }
+  .carousel-inner{
+    border-radius: 0px;
+  }
+  .tileButtons{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+  .tile-icon{
+    transform: scale(0.8) translate(-50%,-50px);
+  }
+  .tile:hover .tile-icon{
+    transform: scale(1) translate(-50%,-40px);
+  }
+  .tile:hover .tile-description{
+    transform: translate(-50%,-10px) rotate(-5deg);
+  }
+  .tile{
+    height: 150px;
+  }
+  .Footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
 }
